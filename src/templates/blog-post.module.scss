@@ -1,0 +1,30 @@
+.postHeader {
+  font-family: sans-serif;
+  border-bottom: 1px solid #E6E6E6;
+  margin-top: 24Px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+
+  .title {
+    margin: 0 0 12px 0;
+    line-height: 1;
+    font-size: 36px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+      line-height: 72px;
+    }
+  }
+
+  span {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 20px
+  }
+}
+
+.postContent {
+  p {
+    font-family: sans-serif;
+  }
+}
