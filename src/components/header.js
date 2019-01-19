@@ -9,18 +9,24 @@ class Header extends Component {
     super(props);
 
     this.state = {
+      isInit: true,
       isShowGnb: false
     }
   }
 
   handleGnbToggleClick = () => {
     const { isShowGnb } = this.state;
-    this.setState({isShowGnb: !isShowGnb});
+    this.setState({
+      isShowGnb: !isShowGnb,
+      isInit: false
+    });
   }
 
   render() {
     return(
-      <header className={cx({[styles.isShowGnb]: this.state.isShowGnb })}>
+      <header className={cx(
+        {[styles.isShowGnb]: this.state.isShowGnb }
+      )}>
         <div className={styles.container}>
           <h1>
             <Link 
@@ -39,7 +45,10 @@ class Header extends Component {
             <span className={styles.barMiddle}></span>
             <span className={styles.barBottom}></span>
           </button>
-          <ul className={styles.gnb}>
+          <ul className={cx(
+            styles.gnb,
+            {[styles.hide]: !this.state.isShowGnb && !this.state.isInit})
+          }>
             <li>
               <Link
                 className={styles.gnbLink}
@@ -70,6 +79,10 @@ class Header extends Component {
             </li>
           </ul>
         </div>
+        <div
+          className={styles.backDrop}
+          onClick={this.handleGnbToggleClick}
+        />
       </header>
     )
   }
