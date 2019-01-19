@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import SEO from '../components/seo'
 import styles from './about.module.scss';
 
 const About = () => (
