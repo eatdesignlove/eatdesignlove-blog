@@ -23,7 +23,7 @@ const MattersPage = props => {
             description={node.frontmatter.description}
             category={node.frontmatter.category}
             date={node.frontmatter.date}
-            thumb={node.frontmatter.image.childImageSharp.resize.src}
+            thumb={node.frontmatter.image && node.frontmatter.image.childImageSharp.resize.src}
             key={node.frontmatter.date}
           />
         ))}

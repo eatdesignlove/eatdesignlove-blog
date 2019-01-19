@@ -2,12 +2,17 @@ import React from 'react';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
+import { DiscussionEmbed } from "disqus-react";
 
 function BlogPost(props) {
 
     const post = props.data.markdownRemark;
     const { title } = post.frontmatter;
-
+    const disqusShortname = "yourdisqusshortname";
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    };
     return (
         <Layout>
             <div>
@@ -16,7 +21,8 @@ function BlogPost(props) {
                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 )}
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-            </div>
+                <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+            </div>  
         </Layout>
     )
 }
