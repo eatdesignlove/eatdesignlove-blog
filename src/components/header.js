@@ -53,7 +53,7 @@ class Header extends Component {
               <Link
                 className={styles.gnbLink}
                 activeClassName={styles.active}
-                to="/creative-lab/">Creative Lab
+                to="/inspiration-lab/">Inspiration Lab
               </Link>
             </li>
             <li>

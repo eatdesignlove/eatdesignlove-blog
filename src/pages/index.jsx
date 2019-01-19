@@ -6,12 +6,14 @@ import SEO from '../components/seo'
 import PostList from '../components/PostList'
 import PostListItem from '../components/PostListItem'
 
+import styles from './index.module.scss'
+
 const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <PostList>
+      <PostList className={styles.postList}>
         {postList.edges.map(({ node }, i) => (
           <PostListItem
             slug={node.fields.slug}

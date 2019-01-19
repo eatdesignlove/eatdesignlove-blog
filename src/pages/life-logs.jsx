@@ -7,12 +7,14 @@ import SEO from '../components/seo'
 import PostList from '../components/PostList'
 import PostListItem from '../components/PostListItem'
 
+import styles from './page.module.scss'
+
 const LifeLogsPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Life Logs" keywords={[`lifestyle`, `story`, `learning`, `study`]} />
-      <h2>Life Logs</h2>
+      <h2 className={styles.title}>Life Logs</h2>
       <PostList>
         {postList.edges.map(({ node }, i) => (
           <PostListItem

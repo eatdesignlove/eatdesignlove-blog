@@ -6,12 +6,14 @@ import SEO from '../components/seo'
 import PostList from '../components/PostList'
 import PostListItem from '../components/PostListItem'
 
+import styles from './page.module.scss'
+
 const MattersPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
       <SEO title="Matters" keywords={[`design`, `graphic`, `3D`, `application`, `work`]} />
-      <h2>Matters</h2>
+      <h2 className={styles.title}>Matters</h2>
       <PostList>
         {!postList && (
           <div>등록된 포스트가 없습니다.</div>

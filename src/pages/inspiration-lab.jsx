@@ -6,14 +6,16 @@ import SEO from '../components/seo'
 import PostList from '../components/PostList'
 import PostListItem from '../components/PostListItem'
 
-const CreativeLabPage = props => {
+import styles from './page.module.scss'
+
+const InspirationLabPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
       <SEO
-        title="Creative Lab"
+        title="Inspiration Lab"
         keywords={[`creative`, `future`, `try`]} />
-      <h2>Creative Lab</h2>
+      <h2 className={styles.title}>Inspiration Lab</h2>
       <PostList>
         {postList.edges.map(({ node }, i) => (
           <PostListItem
@@ -31,13 +33,13 @@ const CreativeLabPage = props => {
   )
 }
 
-export default CreativeLabPage;
+export default InspirationLabPage;
 
-export const CreativeLab = graphql`
-  query CreativeLabListQuery {
+export const InspirationLab = graphql`
+  query InspirationLabListQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date]}
-      filter: { frontmatter: { category: { eq: "Creative Lab" } } }
+      filter: { frontmatter: { category: { eq: "Inspiration Lab" } } }
     ) {
       edges {
         node {
