@@ -36,6 +36,13 @@ module.exports = {
         name: 'pages'
       }
     },
-    'gatsby-plugin-offline'
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          families: ['Azo Sans']
+        }
+      }
+    }
   ],
 }
