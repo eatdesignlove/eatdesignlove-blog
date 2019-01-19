@@ -1,38 +1,81 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import React from 'react'
-import styles from './header.module.scss'
+import React, { Component } from 'react'
+import styles from './header.module.scss';
+import cx from 'classnames';
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <div className={styles.container}>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-      <ul className="gnb">
-        <li>
-          <Link to="/lab/">Creative Lab</Link>
-        </li>
-        <li>
-          <Link to="/matters/">Matters</Link>
-        </li>
-        <li>
-          <Link to="/life-logs/">Life Logs</Link>
-        </li>
-        <li>
-          <Link to="/about/">About</Link>
-        </li>
-      </ul>
-    </div>
-  </header>
-)
+class Header extends Component {
+  constructor(props) {
+    super(props);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+    this.state = {
+      isShowGnb: false
+    }
+  }
+  propTpyes = {
+    
+  }
+
+  defaultProps = {
+
+  }
+
+  handleGnbToggleClick = () => {
+    const { isShowGnb } = this.state;
+    this.setState({isShowGnb: !isShowGnb});
+  }
+
+  render() {
+    return(
+      <header className={cx({[styles.isShowGnb]: this.state.isShowGnb })}>
+        <div className={styles.container}>
+          <h1>
+            <Link 
+              className={styles.vision}
+              to="/"
+            >Inspiration<br />Designer</Link>
+            <Link to="/">
+              <span className={styles.eatdesignlove}>eatdesignlove</span>
+            </Link>
+          </h1>
+          <button
+            className={styles.gnbToggle}
+            onClick={this.handleGnbToggleClick}
+          ></button>
+          <ul className={styles.gnb}>
+            <li>
+              <Link
+                className={styles.gnbLink}
+                activeClassName={styles.active}
+                to="/creative-lab/">Creative Lab
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.gnbLink}
+                activeClassName={styles.active}
+                to="/matters/">Matters
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.gnbLink}
+                activeClassName={styles.active}
+                to="/life-logs/">Life Logs
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.gnbLink}
+                activeClassName={styles.active}
+                to="/about/">About
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </header>
+    )
+  }
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
