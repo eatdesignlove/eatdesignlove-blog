@@ -39,7 +39,10 @@ class Header extends Component {
             <span className={styles.barMiddle}></span>
             <span className={styles.barBottom}></span>
           </button>
-          <ul className={styles.gnb}>
+          <ul className={cx(
+            styles.gnb,
+            {[styles.hide]: !this.state.isShowGnb})
+          }>
             <li>
               <Link
                 className={styles.gnbLink}
