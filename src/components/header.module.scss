@@ -1,5 +1,6 @@
 header {
   margin-bottom: 24px;
+  font-family: azo-sans-web, sans-serif;
 
   &.isShowGnb {
     .gnb {
@@ -59,7 +60,6 @@ header {
   margin: 0 auto;
   width: 100%;
   max-width: 1100px;
-  font-family: 'Azo sans', sans-serif;
 
   @media screen and (min-width: 768px) {
     position: relative;

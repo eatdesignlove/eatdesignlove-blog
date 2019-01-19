@@ -1,5 +1,4 @@
 html {
-  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -183,13 +182,12 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 * {
   box-sizing: inherit;
-  font-family: 'Azo sans', 'Spoqa han sans', sans-serif;
+  font-family: 'Spoqa Han Sans', sans-serif;
 }
 *:before {
   box-sizing: inherit;
@@ -199,7 +197,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  font-family: 'Spoqa Han Sans', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

@@ -38,6 +38,8 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-web-font-loader',
+      id: 'adamina;advent-pro',
+      api: '//use.edgefonts.net',
       options: {
         typekit: {
           families: ['Azo Sans']
