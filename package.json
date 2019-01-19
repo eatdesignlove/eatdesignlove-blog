@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "disqus-react": "^1.0.5",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.26",
     "gatsby-plugin-manifest": "^2.0.9",
@@ -34,6 +35,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
+    "classnames": "^2.2.6",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2"
   },
