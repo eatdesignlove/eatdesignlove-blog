@@ -4,6 +4,9 @@ import styles from './about.module.scss';
 
 const About = () => (
   <Layout>
+    <SEO
+        title="About"
+        keywords={[`eatdesignlove`, `inspiration`, `designer`, `design`, `front-end`]} />
     <div className={styles.container}>
       <h1 className={styles.title}>Hello,<br />I'm eatdesignlove.</h1>
       <p className={styles.desc}>안녕하세요.<br />영감이 우리 삶을 더 행복하게 만든다고 믿는 Inspiration Designer, 유정식입니다.</p>

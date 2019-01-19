@@ -10,7 +10,7 @@ const MattersPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Matters" keywords={[`design`, `graphic`, `3D`, `application`, `work`]} />
       <h2>Matters</h2>
       <PostList>
         {!postList && (

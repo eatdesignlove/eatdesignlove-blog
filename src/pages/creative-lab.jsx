@@ -10,7 +10,9 @@ const CreativeLabPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Creative Lab"
+        keywords={[`creative`, `future`, `try`]} />
       <h2>Creative Lab</h2>
       <PostList>
         {postList.edges.map(({ node }, i) => (

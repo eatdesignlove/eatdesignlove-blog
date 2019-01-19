@@ -11,7 +11,7 @@ const LifeLogsPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Life Logs" keywords={[`lifestyle`, `story`, `learning`, `study`]} />
       <h2>Life Logs</h2>
       <PostList>
         {postList.edges.map(({ node }, i) => (
