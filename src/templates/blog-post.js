@@ -14,7 +14,7 @@ function BlogPost(props) {
         category,
         date
     } = post.frontmatter;
-    const disqusShortname = "yourdisqusshortname";
+    const disqusShortname = "eatdesignlove-github-io";
     const disqusConfig = {
       identifier: post.id,
       title: post.frontmatter.title,
