@@ -12,13 +12,6 @@ class Header extends Component {
       isShowGnb: false
     }
   }
-  propTpyes = {
-    
-  }
-
-  defaultProps = {
-
-  }
 
   handleGnbToggleClick = () => {
     const { isShowGnb } = this.state;
@@ -41,7 +34,11 @@ class Header extends Component {
           <button
             className={styles.gnbToggle}
             onClick={this.handleGnbToggleClick}
-          ></button>
+          >
+            <span className={styles.barTop}></span>
+            <span className={styles.barMiddle}></span>
+            <span className={styles.barBottom}></span>
+          </button>
           <ul className={styles.gnb}>
             <li>
               <Link

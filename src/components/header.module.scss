@@ -36,8 +36,31 @@ header {
     }
 
     .gnbToggle {
-      background-color: #fff;
-      z-index: 10;
+      position: fixed;
+      left: 50%;
+      margin-left: 16px;
+
+      .barTop,
+      .barMiddle,
+      .barBottom {
+        background-color: #fff;
+      }
+      
+      .barTop,
+      .barBottom {
+        width: 50%;
+      }
+      .barMiddle {
+        width: 110%;
+      }
+
+      .barTop {
+        transform: rotate(-45deg) translate(-4px, 2px);
+      }
+
+      .barBottom {
+        transform: rotate(45deg) translate(-4px, -2px);
+      }
     }
 
     a.active {
@@ -108,15 +131,42 @@ header {
 }
 
 .gnbToggle {
-  position: fixed;
+  position: absolute;
   top: 24px;
   right: 16px;
-  width: 36px;
-  height: 24px;
-  background-color: #000;
   border: 0;
-  z-index: 1;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  z-index: 10;
+  background-color: transparent;
   cursor: pointer;
+
+  .barTop,
+  .barMiddle,
+  .barBottom {
+    display: block;
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+    transition: transform .25s, width .25s;
+    transform: rotate(0) translate(0, 0);
+    border-radius: 2px;
+  }
+
+  .barTop {
+    top: 0;
+  }
+
+  .barMiddle {
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  .barBottom {
+    bottom: 0;
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -190,6 +240,7 @@ header {
     line-height: 48px;
     transform: translateX(0);
     transition: transform .05s ease-out;
+    font-weight: bold;
 
     @media screen and (min-width: 768px) {
       color: #000;
@@ -209,6 +260,7 @@ header {
       left: calc(100% + 10px);
       right: -10px;
       z-index: -1;
+      width: 0;
       content: '';
     }
 
@@ -216,13 +268,15 @@ header {
     &:hover,
     &:focus {
       transform: translateX(10px);
-      color: #fff; 
+      background-color: #000;
+      color: #fff;
     }
     
     &.active::after,
     &:hover::after,
     &:focus::after {
       left: -10px;
+      width: auto;
     }
   }
 }
