@@ -267,10 +267,6 @@ header {
     transition: transform .05s ease-out;
     font-weight: bold;
 
-    @media screen and (min-width: 768px) {
-      color: #000;
-    }
-
     &::after {
       background-color: #000;
       transition-delay: 1s;
@@ -289,19 +285,32 @@ header {
       content: '';
     }
 
-    &.active,
-    &:hover,
-    &:focus {
+    &.active {
       transform: translateX(10px);
       background-color: #000;
       color: #fff;
     }
-    
-    &.active::after,
-    &:hover::after,
-    &:focus::after {
+
+    &.active::after {
       left: -10px;
       width: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      color: #000;
+  
+      &:hover,
+      &:focus {
+        transform: translateX(10px);
+        background-color: #000;
+        color: #fff;
+      }
+      
+      &:hover::after,
+      &:focus::after {
+        left: -10px;
+        width: auto;
+      }
     }
   }
 }
