@@ -2,7 +2,7 @@
 title: "우리가 만드는 더 나은 순간, 와디즈 모먼트"
 description: 와디지앵을 위한 화면보호기
 date: '2019-01-16'
-image: 'gatsby-astronaut.png'
+image: 'wadiz-screensaver.png'
 category: 'Inspiration Lab'
 tags: ['project', 'javascript', 'html']
 ---
