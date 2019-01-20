@@ -16,9 +16,13 @@ const InspirationLabPage = props => {
         title="Inspiration Lab"
         keywords={[`creative`, `future`, `try`]} />
       <h2 className={styles.title}>Inspiration Lab</h2>
-      <PostList>
+      <PostList
+        type="CREATIVE_LAB"
+        className={styles.list}
+      >
         {postList.edges.map(({ node }, i) => (
           <PostListItem
+            type="CREATIVE_LAB"
             slug={node.fields.slug}
             title={node.frontmatter.title}
             description={node.frontmatter.description}

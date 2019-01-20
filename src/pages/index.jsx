@@ -16,6 +16,7 @@ const IndexPage = props => {
       <PostList className={styles.postList}>
         {postList.edges.map(({ node }, i) => (
           <PostListItem
+            type="LIFE_LOGS"
             slug={node.fields.slug}
             title={node.frontmatter.title}
             description={node.frontmatter.description}

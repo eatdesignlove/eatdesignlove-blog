@@ -1,7 +1,39 @@
 .title {
   font-size: 36px;
   font-family: 'Azo sans', sans-serif;
-  padding-bottom: 12px;
-  margin-bottom: 48px;
+  padding-top: 24px;
+  padding-bottom: 48px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #000;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
+    padding-bottom: 96px;
+    margin-bottom: 48px;
+    border-bottom: 2px solid #000;
+  }
 }
-  
+
+
+.mattersList {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  a {
+    
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      padding-right: 10px;
+      float: left;
+
+      &:nth-child(even) {
+        padding-left: 10px;
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './PostListItem.module.scss';
+import cx from 'classnames';
 
 const PostListItem = ({
   slug,
@@ -9,10 +10,19 @@ const PostListItem = ({
   date,
   thumb,
   description,
-  category
+  category,
+  type
 }) => (
-  <Link to={slug} className={styles.postListItemContainer}>
-    <article className={styles.postListItem}>
+  <Link
+    to={slug}
+    className={styles.postListItemContainer}
+  >
+    <article className={cx(
+      styles.postListItem,
+      {[styles.projectType]: type === 'CREATIVE_LAB'},
+      {[styles.designType]: type === 'MATTERS'},
+      {[styles.postType]: type === 'LIFE_LOGS'}
+    )}>
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.desc}>{description}</p>

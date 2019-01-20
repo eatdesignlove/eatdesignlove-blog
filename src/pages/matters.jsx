@@ -14,12 +14,13 @@ const MattersPage = props => {
     <Layout>
       <SEO title="Matters" keywords={[`design`, `graphic`, `3D`, `application`, `work`]} />
       <h2 className={styles.title}>Matters</h2>
-      <PostList>
+      <PostList className={styles.mattersList}>
         {!postList && (
           <div>등록된 포스트가 없습니다.</div>
         )}
         {postList && postList.edges.map(({ node }, i) => (
           <PostListItem
+            type="MATTERS"
             slug={node.fields.slug}
             title={node.frontmatter.title}
             description={node.frontmatter.description}

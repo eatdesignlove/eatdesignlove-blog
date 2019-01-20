@@ -1,8 +1,10 @@
 ---
-title: "My first Blog post"
-description: This post is related to the gatsbyjs
-date: '2018-09-26'
+title: "3D Modeling2"
+description: Blender 3D Modeling2
+date: '2019-01-01'
 image: 'gatsby-astronaut.png'
+category: 'Matters'
+tag: []
 ---
 Don't build a website with last decade's tech. The future of the web is mobile,
  JavaScript and APIs—the
