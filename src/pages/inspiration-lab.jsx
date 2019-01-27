@@ -15,7 +15,7 @@ const InspirationLabPage = props => {
       <SEO
         title="Inspiration Lab"
         keywords={[`creative`, `future`, `try`]} />
-      <h2 className={styles.title}>Inspiration Lab</h2>
+      <h2 className={styles.categoryTitle}>Inspiration Lab</h2>
       <PostList
         type="CREATIVE_LAB"
         className={styles.list}

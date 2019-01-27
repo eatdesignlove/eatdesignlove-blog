@@ -13,7 +13,7 @@ const MattersPage = props => {
   return (
     <Layout>
       <SEO title="Matters" keywords={[`design`, `graphic`, `3D`, `application`, `work`]} />
-      <h2 className={styles.title}>Matters</h2>
+      <h2 className={styles.categoryTitle}>Matters</h2>
       <PostList className={styles.mattersList}>
         {!postList && (
           <div>등록된 포스트가 없습니다.</div>

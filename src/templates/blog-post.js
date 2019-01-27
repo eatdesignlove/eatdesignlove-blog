@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import Img from 'gatsby-image';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { DiscussionEmbed } from "disqus-react";
 
 import styles from './blog-post.module.scss';
@@ -31,7 +31,6 @@ function BlogPost(props) {
                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 )}
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </div>  
         </Layout>
     )

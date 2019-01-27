@@ -14,7 +14,7 @@ const LifeLogsPage = props => {
   return (
     <Layout>
       <SEO title="Life Logs" keywords={[`lifestyle`, `story`, `learning`, `study`]} />
-      <h2 className={styles.title}>Life Logs</h2>
+      <h2 className={styles.categoryTitle}>Life Logs</h2>
       <PostList>
         {postList.edges.map(({ node }, i) => (
           <PostListItem

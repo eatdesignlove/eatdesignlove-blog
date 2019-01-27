@@ -220,7 +220,7 @@ header {
     transform: translateX(0);
     height: auto;
     position: absolute;
-    width: 180px;
+    // width: 180px;
     top: 24px;
     right: 0;
     left: auto;
@@ -230,7 +230,8 @@ header {
   }
 
   @media screen and (min-width: 1000px) {
-    width: 180px;
+    // width: 180px;
+    top: 12px;
   }
 
   &::before {
@@ -243,7 +244,7 @@ header {
     content: '';
 
     @media screen and (min-width: 768px) {
-      display: block;
+      display: none;
     }
   }
 
@@ -254,7 +255,8 @@ header {
     transform: translate(20px, 0);
 
     @media screen and (min-width: 768px) {
-      margin: 0;
+      display: inline-block;
+      margin: 0 24px;
       opacity: 1;
       transform: translate(0, 0);
     }
@@ -267,18 +269,17 @@ header {
     color: #fff;
     line-height: 48px;
     transform: translateX(0);
-    transition: transform .05s ease-out;
+    // transition: all .05s ease-out;
     font-weight: bold;
     font-family: 'Azo sans', sans-serif;
 
-    &::after {
-      background-color: #000;
-      transition-delay: 1s;
-      transition: all .1s ease-in;
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
     }
-    
+
     &::after {
       display: block;
+      background-color: #000;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -287,10 +288,14 @@ header {
       z-index: -1;
       width: 0;
       content: '';
+
+      @media screen and (min-width: 768px) {
+        transition-delay: 0 !important;
+      }
     }
 
     &.active {
-      transform: translateX(10px);
+      // transform: translateX(10px);
       background-color: #000;
       color: #fff;
     }
@@ -306,7 +311,6 @@ header {
   
       &:hover,
       &:focus {
-        transform: translateX(10px);
         background-color: #000;
         color: #fff;
       }

@@ -2,6 +2,9 @@
   display: block;
   text-decoration: none;
   margin-bottom: 48px;
+  opacity: 0;
+  animation: fade-in 1s forwards;
+  animation-delay: .8s;
 
   &::after {
     display: block;
@@ -60,6 +63,10 @@
 
       .title {
         padding-top:8px;
+
+        &::after {
+          display: none;
+        }
 
         @media screen and (min-width: 768px) {
           font-size: 18px;
@@ -145,5 +152,17 @@
     left: 0;
     border: 1px solid #e6e6e6;
     content: '';
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
