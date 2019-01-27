@@ -106,7 +106,7 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 24px 12px 8px;
-  font-family: azo-sans-web, sans-serif;
+  font-family: azo-sans-web, 'Spoqa Han Sans', sans-serif;
   font-size: 14px;
   margin-right: 8px;
   
@@ -121,7 +121,7 @@ header {
   position: relative;
   display: inline-block;
   margin-top: 20px;
-  font-family: azo-sans-web, sans-serif;
+  font-family: azo-sans-web, 'Spoqa Han Sans', sans-serif;
   font-weight: bold;
   line-height: 24px;
   font-size: 14px;
@@ -270,7 +270,7 @@ header {
     color: #fff;
     line-height: 48px;
     transform: translateX(0);
-    font-family: azo-sans-web, sans-serif;
+    font-family: azo-sans-web, 'Spoqa Han Sans', sans-serif;
     font-weight: bold;
 
     @media screen and (min-width: 768px) {
