@@ -2,7 +2,7 @@
 
 .layout {
   position: relative;
-  max-width: 1200px;
+  max-width: 1024px;
   width: 100%;
   margin: 0 auto;
 }
@@ -11,8 +11,7 @@
   padding: 0 16px;
 
   @media screen and (min-width: 768px) {
-    max-width: 725px;
-    margin-right: 220px;
+    max-width: 780px;
   }
 
   @media screen and (min-width: 1000px) {
