@@ -7,7 +7,6 @@ import { DiscussionEmbed } from "disqus-react";
 import styles from './blog-post.module.scss';
 
 function BlogPost(props) {
-
     const post = props.data.markdownRemark;
     const {
         title,

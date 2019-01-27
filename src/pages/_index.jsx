@@ -13,7 +13,7 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-      <PostList className={styles.postList}>
+      {/* <PostList className={styles.postList}>
         {postList.edges.map(({ node }, i) => (
           <PostListItem
             type="LIFE_LOGS"
@@ -26,7 +26,7 @@ const IndexPage = props => {
             key={node.frontmatter.date}
           />
         ))}
-      </PostList>
+      </PostList> */}
     </Layout>
   )
 }
