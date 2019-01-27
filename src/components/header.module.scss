@@ -106,6 +106,7 @@ header {
   color: #fff;
   text-decoration: none;
   padding: 24px 12px 8px;
+  font-family: azo-sans-web, sans-serif;
   font-size: 14px;
   margin-right: 8px;
   
@@ -120,7 +121,7 @@ header {
   position: relative;
   display: inline-block;
   margin-top: 20px;
-  font-family: 'Azo sans', sans-serif;
+  font-family: azo-sans-web, sans-serif;
   font-weight: bold;
   line-height: 24px;
   font-size: 14px;
@@ -269,9 +270,8 @@ header {
     color: #fff;
     line-height: 48px;
     transform: translateX(0);
-    // transition: all .05s ease-out;
+    font-family: azo-sans-web, sans-serif;
     font-weight: bold;
-    font-family: 'Azo sans', sans-serif;
 
     @media screen and (min-width: 768px) {
       font-size: 18px;
