@@ -1,10 +1,13 @@
 header {
   margin-bottom: 24px;
-
+  .backDrop {
+    background-color: rgba(255, 255, 255, 0);
+    transition: background .25s ease;
+  }
   &.isShowGnb {
     .backDrop {
-      position: absolute;
-      background-color: rgba(0, 0, 0, 0);
+      position: fixed;
+      background-color: rgba(255, 255, 255, .95);
       top: 0;
       right: 0;
       bottom: 0;
@@ -19,7 +22,7 @@ header {
       padding-top: 72px;
       padding-left: 24px;
       box-shadow: -10px 0 40px 0 rgba(0,0,0,0.25);
-      animation: elastic 1s forwards;
+      animation: elastic .45s forwards;
 
       li {
         opacity: 1;
@@ -92,7 +95,7 @@ header {
   padding: 0 16px;
   margin: 0 auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1200px;
   box-sizing: border-box;
 
   @media screen and (min-width: 768px) {
@@ -112,8 +115,9 @@ header {
   
   @media screen and (min-width: 768px) {
     display: inline-block;
-    margin-right: 16px;
-    font-size: 16px;
+    padding: 24px 12px 12px;
+    margin-right: 12px;
+    font-size: 24px;
   }
 }
 
@@ -129,8 +133,8 @@ header {
   color: #000;
 
   @media screen and (min-width: 768px) {
-    margin-top: 18px;
-    font-size: 16px;
+    margin-top: 24px;
+    font-size: 24px;
   }
 
   &::after {
@@ -325,41 +329,15 @@ header {
 }
 
 
-
 @keyframes elastic {
   0% {
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     left: 100%;
+    
   }
 
-  10% {
-    border-top-left-radius: 80%;
-    border-bottom-left-radius: 80%;
-    left: 50%;
-  }
-
-  15% {
-    border-top-left-radius: 0%;
-    border-bottom-left-radius: 0%;
-  }
-
-  30% {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-  }
-
-  35% {
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-  }
-
-  50% {
-    border-top-left-radius: 25%;
-    border-bottom-left-radius: 25%;
-  }
-
-  60% {
+  100% {
     border-top-left-radius: 0%;
     border-bottom-left-radius: 0%;
   }

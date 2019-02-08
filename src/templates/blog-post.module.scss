@@ -1,18 +1,23 @@
 .postHeader {
   border-bottom: 1px solid #E6E6E6;
   margin-top: 24Px;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   padding-bottom: 24px;
 
   .title {
     margin: 0 0 12px 0;
     line-height: 1.25;
+    padding-top: 24px;
+    padding-bottom: 24px;
     font-size: 36px;
+    font-weight: 900;
 
     @media screen and (min-width: 768px) {
       margin: 0;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      font-size: 48px;
       line-height: 72px;
-      
     }
   }
 

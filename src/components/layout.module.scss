@@ -2,20 +2,11 @@
 
 .layout {
   position: relative;
-  max-width: 1024px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
 .container {
   padding: 0 16px;
-
-  @media screen and (min-width: 768px) {
-    max-width: 780px;
-  }
-
-  @media screen and (min-width: 1000px) {
-    margin-right: 280px;
-  }
-  
 }
