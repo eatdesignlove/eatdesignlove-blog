@@ -3,6 +3,9 @@
   margin-top: 24Px;
   margin-bottom: 48px;
   padding-bottom: 24px;
+  opacity: 0;
+  animation: fade-in 1s forwards;
+  animation-delay: .5s;
 
   .title {
     margin: 0 0 12px 0;
@@ -11,6 +14,7 @@
     padding-bottom: 24px;
     font-size: 36px;
     font-weight: 900;
+    word-break: keep-all;
 
     @media screen and (min-width: 768px) {
       margin: 0;
@@ -28,8 +32,102 @@
   }
 }
 
+.titleImage {
+  opacity: 0;
+  margin-bottom: 48px;
+  animation: fade-in 1s forwards;
+  animation-delay: 1s;
+}
+
 .postContent {
+  opacity: 0;
+  animation: fade-in 1s forwards;
+  animation-delay: 1.5s;
+  
+  h2 {
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      padding-top: 24px;
+      padding-bottom: 48px;
+      line-height: 48px;
+    }
+  }
+
+  h3 {
+    @media screen and (min-width: 768px) {
+      float: left;
+      line-height: 48px;
+    }
+  }
+
+  h4 {
+    @media screen and (min-width: 768px) {
+      line-height: 48px;
+      margin-left: 50%;
+      font-size: 18px;
+    }
+  }
+
+  em {
+    display: block;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  strong {
+    display: block;
+    @media screen and (min-width: 768px) {
+      margin: 0;
+
+      &::after {
+        margin-bottom: 24px;
+        display: block;
+        clear: both;
+        content: '';
+      }
+  
+      img {
+        width: 50%;
+        float: left;
+      }
+    }
+  }
+
   p {
     font-family: sans-serif;
+    line-height: 32px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 50%;
+      font-size: 18px;
+    }
+  }
+
+  ul,
+  pre {
+    @media screen and (min-width: 768px) {
+      margin-left: 50%;
+    }
+  }
+
+  ul {
+    padding: 24px 0 24px 24px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

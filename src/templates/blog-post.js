@@ -28,9 +28,11 @@ function BlogPost(props) {
                     <span className={styles.date}>{date}</span>
                 </div>
                 {!!post.frontmatter.image && (
-                    <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+                    <Img
+                        className={styles.titleImage}
+                        fluid={post.frontmatter.image.childImageSharp.fluid} />
                 )}
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>  
         </Layout>
     )

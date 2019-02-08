@@ -4,6 +4,7 @@ header {
     background-color: rgba(255, 255, 255, 0);
     transition: background .25s ease;
   }
+
   &.isShowGnb {
     .backDrop {
       position: fixed;
@@ -186,7 +187,7 @@ header {
     bottom: 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 860px) {
     display: none;
   }
 }
@@ -220,12 +221,11 @@ header {
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 860px) {
     padding-top: 0;
     transform: translateX(0);
     height: auto;
     position: absolute;
-    // width: 180px;
     top: 24px;
     right: 0;
     left: auto;
@@ -235,7 +235,6 @@ header {
   }
 
   @media screen and (min-width: 1000px) {
-    // width: 180px;
     top: 12px;
   }
 
@@ -259,7 +258,7 @@ header {
     transition: opacity .25s, transform 0.2s;
     transform: translate(20px, 0);
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 860px) {
       display: inline-block;
       margin: 0 24px;
       opacity: 1;
@@ -293,7 +292,7 @@ header {
       width: 0;
       content: '';
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 860px) {
         transition-delay: 0 !important;
       }
     }
@@ -309,7 +308,7 @@ header {
       width: auto;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 860px) {
       color: #000;
       font-size: 18px;
   

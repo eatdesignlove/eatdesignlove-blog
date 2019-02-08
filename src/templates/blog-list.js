@@ -3,8 +3,10 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/PostList';
 import PostListItem from '../components/PostListItem';
+import cx from 'classnames';
 
-import styles from '../pages/index.module.scss'
+// import styles from '../pages/index.module.scss'
+import styles from './blog-list.module.scss'
 
 class BlogList extends React.Component {
   render() {
@@ -32,24 +34,29 @@ class BlogList extends React.Component {
             />
           ))}
         </PostList>
-        {!isFirst && (
-          <Link to={prevPage} >
-            Prev
-          </Link>
-        )}
-        {Array.from({ length: numPages }, (_, i) => (
-          <Link
-            key={`pagination-number${i + 1}`}
-            to={`/${i === 0 ? "" : i + 1}`}
-          >
-            {i + 1}
-          </Link>
-        ))}
-        {!isLast && (
-          <Link to={nextPage} >
-            Next
-          </Link>
-        )}
+        <div className={styles.pagination}>
+          {!isFirst && (
+            <Link className={styles.prevPage} to={prevPage} >
+              Prev
+            </Link>
+          )}
+          {Array.from({ length: numPages }, (_, i) => (
+            <Link
+              className={cx(
+                styles.page,
+                {[styles.active]: i+1 === currentPage})}
+              key={`pagination-number${i + 1}`}
+              to={`/${i === 0 ? "" : i + 1}`}
+            >
+              {i + 1}
+            </Link>
+          ))}
+          {!isLast && (
+            <Link className={styles.nextPage} to={nextPage} >
+              Next
+            </Link>
+          )}
+        </div>
       </Layout>
     )
   }
