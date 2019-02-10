@@ -144,6 +144,22 @@
   ul {
     padding: 12px 0 24px 12px;
   }
+
+  hr + p,
+  hr + p + p {
+    margin: 0;
+  }
+
+  hr + p + p > [class="gatsby-resp-image-wrapper"] {
+    display: block;
+    margin-bottom: 72px;
+  }
+  
+  [class="gatsby-resp-image-wrapper"] {
+    margin: 0;
+    max-width: 100% !important;
+    box-shadow: 0 20px 50px 0 rgba(0,0,0,0.1);
+  }
 }
 
 @keyframes fade-in {

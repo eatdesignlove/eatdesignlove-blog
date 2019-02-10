@@ -27,11 +27,16 @@ module.exports = {
         plugins: [
           `gatsby-remark-prismjs`,
           {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
-            },
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+            }
           },
+
         ]
       }
     },
@@ -40,13 +45,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages'
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/images`,
-        name: 'images'
       }
     },
   ],
