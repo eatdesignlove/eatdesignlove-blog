@@ -11,6 +11,7 @@ function BlogPost(props) {
     const {
         title,
         category,
+        description,
         date
     } = post.frontmatter;
     const disqusShortname = "eatdesignlove-github-io";
@@ -24,15 +25,20 @@ function BlogPost(props) {
             <div className={styles.container}>
                 <div className={styles.postHeader}>
                     <h1 className={styles.title}>{title}</h1>
+                    <p className={styles.description}>{description}</p>
                     <span className={styles.category}>{category}</span>
                     <span className={styles.date}>{date}</span>
                 </div>
                 {!!post.frontmatter.image && (
                     <Img
                         className={styles.titleImage}
-                        fluid={post.frontmatter.image.childImageSharp.fluid} />
+                        fluid={post.frontmatter.image.childImageSharp.fluid}
+                    />
                 )}
-                <div className={styles.postContent} dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div
+                    className={styles.postContent}
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                />
             </div>  
         </Layout>
     )

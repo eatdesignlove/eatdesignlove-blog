@@ -33,9 +33,6 @@ exports.createPages = ({ actions, graphql }) => {
 
 				const postsPerPage = 6
 				const numPages = Math.ceil(posts.length / postsPerPage);
-				console.log('==========================')
-				console.log(postsPerPage, numPages)
-				console.log('==========================')
 				Array.from({ length: numPages }).forEach((_, i) => {
 					createPage({
 						path: i === 0 ? `/` : `/${i + 1}`,
