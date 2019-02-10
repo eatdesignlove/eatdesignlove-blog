@@ -1,34 +1,40 @@
 .postHeader {
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 2px solid #000;
   margin-top: 24Px;
-  margin-bottom: 48px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 48px;
   opacity: 0;
   animation: fade-in 1s forwards;
   animation-delay: .5s;
 
   .title {
-    margin: 0 0 12px 0;
+    margin: 0;
     line-height: 1.25;
     padding-top: 24px;
-    padding-bottom: 24px;
     font-size: 36px;
     font-weight: 900;
     word-break: keep-all;
 
     @media screen and (min-width: 768px) {
       margin: 0;
-      padding-top: 48px;
-      padding-bottom: 48px;
       font-size: 48px;
       line-height: 72px;
     }
   }
 
+  .description {
+    font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 72px;
+    color: #222;
+  }
+
   span {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
-    margin-right: 20px
+    margin-right: 20px;
+    color: #000;
   }
 }
 
@@ -40,6 +46,7 @@
 }
 
 .postContent {
+  padding-bottom: 96px;
   opacity: 0;
   animation: fade-in 1s forwards;
   animation-delay: 1.5s;
@@ -57,6 +64,7 @@
     @media screen and (min-width: 768px) {
       float: left;
       line-height: 48px;
+      font-weight: 900;
     }
   }
 
@@ -68,43 +76,40 @@
     }
   }
 
-  em {
-    display: block;
-    @media screen and (min-width: 768px) {
-      margin: 0;
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  strong {
-    display: block;
-    @media screen and (min-width: 768px) {
-      margin: 0;
-
-      &::after {
-        margin-bottom: 24px;
-        display: block;
-        clear: both;
-        content: '';
-      }
-  
-      img {
-        width: 50%;
-        float: left;
-      }
-    }
+  blockquote p {
+    padding-top: 24px;
+    font-size: 24px;
+    line-height: 48px;
+    padding-bottom: 24px;
+    font-weight: bold;
+    color: #9b9fb5;
   }
 
   p {
     font-family: sans-serif;
     line-height: 32px;
+    word-break: keep-all;
 
     @media screen and (min-width: 768px) {
       margin-left: 50%;
+      line-height: 36px;
       font-size: 18px;
+    }
+  }
+
+  a {
+    color: #000;
+    font-weight: bold;
+  }
+
+  hr {
+    background: transparent;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 48px;
+      margin-bottom: 48px;
     }
   }
 
@@ -115,8 +120,29 @@
     }
   }
 
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 48px;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 48px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 50%;
+    }
+  }
+
+  h4 + ul,
+  h5 + ul {
+    padding-top: 12px;
+  }
+
   ul {
-    padding: 24px 0 24px 24px;
+    padding: 12px 0 24px 12px;
   }
 }
 
