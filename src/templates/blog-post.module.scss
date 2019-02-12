@@ -1,3 +1,5 @@
+$layoutLeft: 37.5%;
+
 .postHeader {
   border-bottom: 2px solid #000;
   margin-top: 24Px;
@@ -30,6 +32,11 @@
     color: #222;
   }
 
+  .description {
+    font-size: 18px;
+    color: #333;
+  }
+
   span {
     font-size: 16px;
     font-weight: bold;
@@ -52,54 +59,63 @@
   animation-delay: 1.5s;
 
   h2, h3 {
-    width: 35%;
+    width: 100%;
     padding-right: 24px;
     word-break: keep-all;
+
+    @media screen and (min-width: 768px) {
+      width: $layoutLeft;
+      padding-right: 48px;
+    }
   }
 
   h2 {
+    padding-bottom: 48px;
+
     @media screen and (min-width: 768px) {
       text-align: center;
       padding-top: 24px;
-      padding-bottom: 48px;
       line-height: 48px;
     }
   }
 
   h3 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 36px;
+    
     @media screen and (min-width: 768px) {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
       float: left;
-      line-height: 48px;
+      line-height: 36px;
       font-weight: 900;
     }
   }
 
   h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 36px;
+
     @media screen and (min-width: 768px) {
-      line-height: 48px;
-      margin-left: 35%;
+      margin-bottom: 8px;
+      margin-left: $layoutLeft;
       font-size: 18px;
     }
-  }
-
-  blockquote p {
-    padding-top: 24px;
-    font-size: 24px;
-    line-height: 48px;
-    padding-bottom: 24px;
-    font-weight: bold;
-    color: #9b9fb5;
   }
 
   p {
     font-family: sans-serif;
     line-height: 32px;
     word-break: keep-all;
+    color: #393939;
 
     @media screen and (min-width: 768px) {
-      margin-left: 35%;
+      margin-left: $layoutLeft;
       line-height: 36px;
-      font-size: 18px;
+      font-size: 17px;
     }
   }
 
@@ -114,22 +130,16 @@
     margin-bottom: 24px;
 
     @media screen and (min-width: 768px) {
-      margin-top: 48px;
-      margin-bottom: 48px;
+      margin-top: 36px;
+      margin-bottom: 36px;
     }
   }
 
   ul,
   pre {
     @media screen and (min-width: 768px) {
-      margin-left: 35%;
+      margin-left: $layoutLeft;
     }
-  }
-
-  h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 48px;
   }
 
   h5 {
@@ -138,7 +148,7 @@
     line-height: 48px;
 
     @media screen and (min-width: 768px) {
-      margin-left: 35%;
+      margin-left: $layoutLeft;
     }
   }
 
@@ -148,7 +158,17 @@
   }
 
   ul {
-    padding: 12px 0 24px 12px;
+    padding: 12px 0 24px 0;
+    word-break: keep-all;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+      padding: 12px 0 24px 18px;
+    }
+
+    li {
+      font-size: 17px;
+    }
   }
 
   hr + p,
@@ -161,10 +181,38 @@
     margin-bottom: 72px;
   }
   
+  blockquote {
+    margin-left: 0;
+  }
+
+  blockquote p {
+    padding-top: 24px;
+    font-size: 24px;
+    line-height: 36px;  
+    padding-bottom: 24px;
+    font-weight: bold;
+    color: #9b9fb5;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  em {
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-style: normal;
+    color: #a5a5a5;
+    display: block;
+    text-align: right;
+  }
+
   [class="gatsby-resp-image-wrapper"] {
     margin: 0;
     max-width: 100% !important;
-    box-shadow: 0 20px 50px 0 rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.1);
   }
 }
 

@@ -94,11 +94,19 @@
 
   &.postType {
     padding-top: 24px;
-    padding-bottom: 48px;
+    padding-bottom: 24px;
     border-bottom: 1px solid #f6f6f6;
 
     .thumb {
       display: none;
+    }
+
+    .category {
+      font-size: 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 48px;
     }
   }
 }
@@ -115,18 +123,18 @@
     @media screen and (min-width: 768px) {
       font-size: 24px;
       line-height: 48px;
-      font-weight: 900;
     }
   }
 
   .desc {
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 14px;
     line-height: 24px;
     
     @media screen and (min-width: 768px) {
       font-size: 15px;
+      margin-top: 12px;
+      margin-bottom: 12px;
     }
   }
 
