@@ -30,6 +30,11 @@
     color: #222;
   }
 
+  .description {
+    font-size: 18px;
+    color: #333;
+  }
+
   span {
     font-size: 16px;
     font-weight: bold;
@@ -52,43 +57,50 @@
   animation-delay: 1.5s;
 
   h2, h3 {
-    width: 35%;
+    width: 100%;
     padding-right: 24px;
     word-break: keep-all;
+
+    @media screen and (min-width: 768px) {
+      width: 35%;
+    }
   }
 
   h2 {
+    padding-bottom: 48px;
+
     @media screen and (min-width: 768px) {
       text-align: center;
       padding-top: 24px;
-      padding-bottom: 48px;
       line-height: 48px;
     }
   }
 
   h3 {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e6e6e6;
+    line-height: 36px;
+    
     @media screen and (min-width: 768px) {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
       float: left;
-      line-height: 48px;
+      line-height: 36px;
       font-weight: 900;
     }
   }
 
   h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 36px;
+
     @media screen and (min-width: 768px) {
-      line-height: 48px;
+      margin-bottom: 8px;
       margin-left: 35%;
       font-size: 18px;
     }
-  }
-
-  blockquote p {
-    padding-top: 24px;
-    font-size: 24px;
-    line-height: 48px;
-    padding-bottom: 24px;
-    font-weight: bold;
-    color: #9b9fb5;
   }
 
   p {
@@ -126,12 +138,6 @@
     }
   }
 
-  h4 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 48px;
-  }
-
   h5 {
     margin-bottom: 0;
     font-size: 16px;
@@ -148,7 +154,12 @@
   }
 
   ul {
-    padding: 12px 0 24px 12px;
+    padding: 12px 0 24px 0;
+    word-break: keep-all;
+
+    @media screen and (min-width: 768px) {
+      padding: 12px 0 24px 18px;
+    }
   }
 
   hr + p,
@@ -161,6 +172,24 @@
     margin-bottom: 72px;
   }
   
+  blockquote {
+    margin-left: 0;
+  }
+
+  blockquote p {
+    padding-top: 24px;
+    font-size: 24px;
+    line-height: 36px;  
+    padding-bottom: 24px;
+    font-weight: bold;
+    color: #9b9fb5;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
   [class="gatsby-resp-image-wrapper"] {
     margin: 0;
     max-width: 100% !important;
