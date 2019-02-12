@@ -20,7 +20,10 @@ const InspirationLabPage = props => {
         type="CREATIVE_LAB"
         className={styles.list}
       >
-        {postList.edges.map(({ node }, i) => (
+        {!postList && (
+          <div>등록된 포스트가 없습니다.</div>
+        )}
+        {postList && postList.edges.map(({ node }, i) => (
           <PostListItem
             type="CREATIVE_LAB"
             slug={node.fields.slug}
