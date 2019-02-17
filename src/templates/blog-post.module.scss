@@ -89,18 +89,23 @@ $layoutLeft: 37.5%;
       margin-bottom: 0;
       padding-bottom: 0;
       float: left;
+      font-size: 28px;
       line-height: 36px;
       font-weight: 900;
     }
   }
 
   h4 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 12px;
+    margin-bottom: 8px;
     line-height: 36px;
+    background: #000;
+    color: #fff;
+    padding: 0 8px;
+    display: inline-block;
 
     @media screen and (min-width: 768px) {
-      margin-bottom: 8px;
+      margin-top: 24px;
       margin-left: $layoutLeft;
       font-size: 18px;
     }
