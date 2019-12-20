@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `eatdesignlove's blog`,
     description: `Daily moments, Design life , Loving world`,
+    url: `https://blog.eatdesignlove.com`,
     author: `@eatdesignlove`,
   },
   plugins: [
