@@ -5,6 +5,15 @@ module.exports = {
     author: `@eatdesignlove`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-39362681-4',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
