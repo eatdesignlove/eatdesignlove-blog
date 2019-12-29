@@ -11,7 +11,6 @@ export default ({ data }) => {
         description={post.frontmatter.subtitle}
         lang="ko"
         title={`${post.frontmatter.title} - ${post.frontmatter.subtitle} | blog.eatdesignlove.com`}
-        siteUrl={`${site.url}${post.fields.slug}`}
       />
       <div>
         <h1>{post.frontmatter.title}</h1>
