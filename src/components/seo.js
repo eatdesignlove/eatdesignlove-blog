@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const { author, googleSiteVerification } = site.siteMetadata;
-
+      console.log(googleSiteVerification, '[googleSiteVerification]');
   return (
     <Helmet
       htmlAttributes={{
@@ -70,7 +70,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `google-site-verification`,
-          content: googleSiteVerification,
+          content: `qU85aGon70FhD1tiDsST9J8N6uNDB3ZZE8VONP3i0IY`,
         },
       ].concat(meta)}
     />
