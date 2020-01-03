@@ -4,7 +4,6 @@ module.exports = {
     description: `Daily moments, Design life , Loving world`,
     url: `https://blog.eatdesignlove.com`,
     author: `@eatdesignlove`,
-    googleSiteVerification: `qU85aGon70FhD1tiDsST9J8N6uNDB3ZZE8VONP3i0IY`
   },
   plugins: [
     {
