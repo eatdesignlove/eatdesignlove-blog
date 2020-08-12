@@ -15,7 +15,6 @@ export default ({ data }) => {
       <div>
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.subtitle}</p>
-        {post.frontmatter.tags.map(item => (<span>{item}</span>))}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -35,7 +34,7 @@ export const query = graphql`
       frontmatter {
         title
         subtitle
-        tags
+        category
       }
       fields {
         slug

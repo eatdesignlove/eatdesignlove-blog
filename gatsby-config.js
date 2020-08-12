@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `eatdesignlove's blog`,
-    description: `Daily moments, Design life , Loving world`,
-    url: `https://blog.eatdesignlove.com`,
+    title: `eatdesignlove`,
+    description: `eatdesignlove's blog`,
+    url: `blog.eatdesignlove.com`,
     author: `@eatdesignlove`,
     googleSiteVerification: `qU85aGon70FhD1tiDsST9J8N6uNDB3ZZE8VONP3i0IY`
   },
@@ -14,6 +14,16 @@ module.exports = {
         head: false,
         anonymize: true,
         respectDNT: true,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Noto Sans KR\:400,500`,
+          `space mono\:400,700`
+        ],
+        display: 'swap'
       }
     },
     `gatsby-plugin-react-helmet`,

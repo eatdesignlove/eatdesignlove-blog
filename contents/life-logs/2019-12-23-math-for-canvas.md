@@ -1,11 +1,9 @@
 ---
+emoji: "✏️"
 title: "캔버스 프로토타이핑, 그리고 수학"
 subtitle: "좌표간 거리 구하기와 45도의 선들을 빈틈없이 배치하기"
 date: "2019-12-23"
-tags:
-- Canvas
-- Devlopment
-- Study
+category: "Devlopment"
 ---
 
 ### 캔버스 프로토타이핑
