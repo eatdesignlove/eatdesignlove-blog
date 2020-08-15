@@ -23,7 +23,7 @@ const Menu = ({ currentPath, isShadow }) => {
             {MENU_LIST.map((item, idx) => (
                 <li>
                     <Link to={item.href}>
-                        <UI.MenuLink isActive={idx === 0 ? currentPath === item.href : currentPath.indexOf(item.href) === 0}>{item.label}</UI.MenuLink>
+                        <UI.MenuLink isActive={idx === 0 ? currentPath === item.href : currentPath && currentPath.indexOf(item.href) === 0}>{item.label}</UI.MenuLink>
                     </Link>
                 </li>
             ))}
