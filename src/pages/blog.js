@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import CommonLayout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components';
 
@@ -22,6 +22,30 @@ const BlogCard = styled.div`
     font-size: 24px;
     font-weight: 500;
     word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+
+    span {
+      display: inline-block;
+      font-size: 17px;
+    }
+  }
+
+  @keyframes hovered {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    25% {
+      transform: translate3d(0, -10px, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &:hover {
+    h3 span {
+      animation: hovered 0.5s forwards;
+    }
   }
 `;
 
@@ -33,15 +57,16 @@ const BlogDesc = styled.span`
 `;
 
 const BlogPage = ({ data, path }) => (
-  <Layout currentPath={path}>
+  <CommonLayout currentPath={path}>
     <SEO title="Home" />
     <BlogWrapper>
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <BlogCard key={node.id}>
-        <h3>
           <Link to={node.fields.slug}>
-            {node.frontmatter.emoji}<br />
-            {node.frontmatter.title}
+            <h3>
+              <span>{node.frontmatter.emoji}</span><br />
+              {node.frontmatter.title}
+            </h3>
             <div>
               <BlogDesc>
                 {node.frontmatter.category}
@@ -51,12 +76,12 @@ const BlogPage = ({ data, path }) => (
               </BlogDesc>
             </div>
           </Link>
-        </h3>
+        
         {/* <p>{node.excerpt}</p> */}
       </BlogCard>
     ))}
     </BlogWrapper>
-  </Layout>
+  </CommonLayout>
 )
 
 export const query = graphql`

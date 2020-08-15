@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import CommonLayout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components';
 
 const AboutText = styled.p`
-    margin-top: 28px;
+    margin-top: 40px;
     word-break: keep-all;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.5;
     font-family: 'Noto Sans KR', sans-serif;
@@ -57,7 +57,7 @@ const ExpDate = styled.p`
 `;
 
 const AboutPage = ({ data, path }) => (
-    <Layout currentPath={path}>
+    <CommonLayout currentPath={path}>
     <SEO title="Home" />
     <AboutText>
         아름답고 유용한 무언가를 
@@ -65,6 +65,16 @@ const AboutPage = ({ data, path }) => (
         되었습니다. 제가 만들고 기여하는 것들이
         조금이나마 세상을 더 즐겁고, 따듯하게 하는 영감이 되길 바랍니다.
     </AboutText>
+    <ContentBox>
+        <h3>Contact</h3>
+        <ul>
+            <li style={{border: 0}}>
+                <p>
+                    <a href="mailto:eatdesignlove@gmail.com">eatdesignlove@gmail.com</a>
+                </p>                
+            </li>
+        </ul>
+    </ContentBox>
     <ContentBox>
         <h3>Experience</h3>
         <ul>
@@ -80,11 +90,11 @@ const AboutPage = ({ data, path }) => (
                     Front-end Developer
                     <span>@FastCampus</span>
                 </p>
-                <ExpDate>2017.09 - 2020.04</ExpDate>
+                <ExpDate>2016.10 - 2017.09</ExpDate>
             </li>
         </ul>
     </ContentBox>
-  </Layout>
+  </CommonLayout>
 )
 
 export default AboutPage

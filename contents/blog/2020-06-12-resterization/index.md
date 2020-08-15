@@ -1,6 +1,6 @@
 ---
 emoji: "📺"
-title: "래스터화Rasterization란 무엇일까"
+title: "레스터화란 무엇일까"
 subtitle: "벡터에서 픽셀로"
 date: "2020-06-12"
 category: "Devlopment"

@@ -1,0 +1,21 @@
+html {
+    overflow-y:scroll;
+}
+
+html, body {
+    font-family: 'Space Mono', 'Noto Snas KR', sans-serif;
+}
+
+html, body, h1, h2, h3, h4, p, ul, ol, li, div, a {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a, a:hover, a:focus, a:visited {
+    text-decoration: none;
+    color: #333;
+}
