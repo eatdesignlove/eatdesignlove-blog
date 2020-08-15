@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import CommonLayout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components';
+
 
 const BlogWrapper = styled.div`
   padding-top: 40px;
@@ -56,37 +57,41 @@ const BlogDesc = styled.span`
   font-family: 'Space Mono', sans-serif;
 `;
 
-const BlogPage = ({ data, path }) => (
-  <CommonLayout currentPath={path}>
-    <SEO title="Home" />
-    <BlogWrapper>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <BlogCard key={node.id}>
-          <Link to={node.fields.slug}>
-            <h3>
-              <span>{node.frontmatter.emoji}</span><br />
-              {node.frontmatter.title}
-            </h3>
-            <div>
-              <BlogDesc>
-                {node.frontmatter.category}
-              </BlogDesc>
-              <BlogDesc>
-                {node.frontmatter.date}
-              </BlogDesc>
-            </div>
-          </Link>
-        
-        {/* <p>{node.excerpt}</p> */}
-      </BlogCard>
-    ))}
-    </BlogWrapper>
-  </CommonLayout>
-)
+const BlogPage = ({ data, path }) => {
+  
+  return (
+    <CommonLayout currentPath={path}>
+      <SEO title="Home" />
+      <BlogWrapper>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <BlogCard key={node.id}>
+            <Link to={node.fields.slug}>
+              <h3>
+                <span>{node.frontmatter.emoji}</span><br />
+                {node.frontmatter.title}
+              </h3>
+              <div>
+                <BlogDesc>
+                  {node.frontmatter.category}
+                </BlogDesc>
+                <BlogDesc>
+                  {node.frontmatter.date}
+                </BlogDesc>
+              </div>
+            </Link>
+          {/* <p>{node.excerpt}</p> */}
+        </BlogCard>
+      ))}
+      </BlogWrapper>
+    </CommonLayout>
+  )
+}
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark 
+    (sort: { fields: [frontmatter___date], order: DESC })
+    {
       totalCount
       edges {
         node {

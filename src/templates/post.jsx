@@ -1,7 +1,7 @@
-import React from "react"
-import Helmet from "react-helmet"
+import React, { useEffect } from "react"
 import SEO from "../components/seo"
-import styled from 'styled-components';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
+
 import { Link } from 'gatsby';
 
 import CommonLayout from '../components/layout';
@@ -13,6 +13,9 @@ export default ({ data, path, pathContext }) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
   const { next, prev } = pathContext;
+  useEffect(() => {
+    deckDeckGoHighlightElement();
+  }, []);
   return (
     <CommonLayout currentPath={path} isSimpleHeader>
       <SEO

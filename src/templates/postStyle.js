@@ -4,7 +4,6 @@ import { tokens } from '../components/eui';
 const PostWrapper = styled.div`
   padding: 48px 0 80px;
   margin: 0 auto;
-  max-width: 760px;
   width: 100%;
 `;
 
@@ -69,6 +68,19 @@ const PostContent = styled.div`
     line-height: 1.75;
   }
 
+  blockquote {
+    margin: 0 0 ${tokens.spacing.s7} ${tokens.spacing.s2};
+    padding: ${tokens.spacing.s3} 0 ${tokens.spacing.s3} ${tokens.spacing.s5};
+    border-left: 1px solid ${tokens.color.dark1};
+
+    p {
+      margin: 0;
+      font-size: ${tokens.typography.size.display1};
+      color: ${tokens.color.dark1};
+      word-break: keep-all;
+    }
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -113,7 +125,7 @@ const ContextPostLink = styled.div`
   }
 
   ${(props) => props.dir === 'prev' && `
-    padding-left: 72px;
+    padding-left: 64px;
 
     span, strong {
       text-align: left;
@@ -126,7 +138,7 @@ const ContextPostLink = styled.div`
   `}
 
   ${(props) => props.dir === 'next' && `
-      padding-right: 72px;
+      padding-right: 64px;
 
       span, strong {
         text-align: right;
@@ -134,7 +146,7 @@ const ContextPostLink = styled.div`
 
       svg {
         top: 50%;
-        left: ${tokens.spacing.s5};
+        right: ${tokens.spacing.s5};
       }
   `}
 `;

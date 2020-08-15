@@ -19,3 +19,14 @@ a, a:hover, a:focus, a:visited {
     text-decoration: none;
     color: #333;
 }
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+.deckgo-highlight-code-carbon {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
