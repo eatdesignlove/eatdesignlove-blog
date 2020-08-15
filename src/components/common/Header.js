@@ -21,10 +21,10 @@ const Header = ({ siteTitle, currentPath, isSimple }) => {
   return (
     <>
       <UI.HeaderWrapper>
-        <div>
-          <UI.EatdesignloveLogo>
-            eatdesignlove.com
-          </UI.EatdesignloveLogo>
+        <UI.EatdesignloveLogo>
+          eatdesignlove.com
+        </UI.EatdesignloveLogo>
+        <UI.HeaderInfo>
           <UI.BlogTitle style={{ margin: 0 }}>
             <Link to="/">
               <strong>jeongsic.yoo</strong>
@@ -36,7 +36,7 @@ const Header = ({ siteTitle, currentPath, isSimple }) => {
             Front-end Developer<br />
             Inspiration Designer
           </UI.EatdesignloveDesc>
-        </div>
+        </UI.HeaderInfo>
       </UI.HeaderWrapper>
       <Menu currentPath={currentPath} isShadow={true} />
     </>

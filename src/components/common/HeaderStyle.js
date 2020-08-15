@@ -8,6 +8,14 @@ const HeaderWrapper = styled.header`
   width: 100%;
 `;
 
+const HeaderInfo = styled.div`
+  display: block;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+`;
+
 const SimpleHeaderWrapper = styled(HeaderWrapper)`
   margin-top: 28px;
   padding-top: 8px;
@@ -18,6 +26,7 @@ const SimpleHeaderWrapper = styled(HeaderWrapper)`
   display: flex;
   justify-content: space-between;
   background: #fff;
+  z-index: 1;
 
   button {
     display: block;
@@ -64,15 +73,19 @@ const BlogTitle = styled.p`
 `;
 
 const EatdesignloveDesc = styled.p`
-  margin-top: 24px;
+  margin-top: 16px;
   margin-bottom: 48px;
   font-size: 16px;
+  
+  @media screen and (min-width: 768px) {
+    margin-top: 8px;
+    margin-left: 40px;
+  }
 `;
 
 const EatdesignloveLogo = styled.h1`
   display: inline-block;
   margin-left: -4px;
-  margin-bottom: 8px;
   margin-right: 16px;
   width: 24px;
   height: 24px;
@@ -88,6 +101,7 @@ const EatdesignloveLogo = styled.h1`
 
 export default {
     HeaderWrapper,
+    HeaderInfo,
     BlogTitle,
     EatdesignloveDesc,
     EatdesignloveLogo,
